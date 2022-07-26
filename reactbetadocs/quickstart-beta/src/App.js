@@ -22,12 +22,35 @@ function App() {
     </div>
   );
 }
-
 export default App;
 */
+
+const user = {
+  name: "Dick Butt",
+  imageUrl: "https://i.imgur.com/etjgJ2D.jpeg",
+  imageSize: 90,
+};
+
 function MyButton(){
   return(
-    <button>I'm button</button>
+    <button>I'm Monsieur button</button>
+  )
+}
+
+function Profile(){
+  return(
+  <>
+    <h2>{user.name}</h2>
+    <img
+    className="avatar"
+    src={user.imageUrl}
+    alt={'Photo of ' + user.name}
+    style={{
+      width: user.imageSize,
+      height: user.imageSize
+    }}
+    ></img>
+  </>
   )
 }
 
@@ -36,6 +59,8 @@ export default function App(){
     <div>
       <h1>Welcome to my first app</h1>
       <MyButton />
+      <br></br>
+      <Profile />
     </div>
   )
 }
