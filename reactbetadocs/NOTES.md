@@ -159,4 +159,50 @@ export default function MyApp(){
    )
 }
 ```
+
+## Thinking in react
+
+The react documentation describes several steps to successfully buidling an react app
+
+1. Start with a **mockup**. This means that you should write down your app using pencil and paper or a mockup app (e.g. pencil in linux or figma for payed developers)
+2. Break the Ui into a **component hierachy**. Draw containers around each of your components and give them a name. Depending on your background you may think of it from differenent perspectives:
+   1. **Programming**: Following the *single responsibility principe* a function or an object should do one thing. If it does more things it should be broken up into subfucntions/objects (or react component :wink:)
+   2. **CSS**: consider a class selector (components are a bit less granular)
+   3. **Design**: consider organizing designin layers &Rightarrow; 
+
+&Rightarrow; with a well structured data model this usually step is intuitive because the same principles that apply to the data architecture apply to react components. 
+
+3. Build a **static** version of your app first. Without any interactivy the main focus is on rendering the data model. Thus, you want to build components that nest other components and use props. (Dont use state in this step)
+4. Find **minimal but complete** representation of the state of the ui. In this step you want to find the minimal but complete set of state that your app needs to remember. The most important principle (D)ont (re)peat (y)ourself. E.g. if you want to render a shopping list kept in an array and have to display one item keep the item as a state. If you need to additionally render the count of all items read the length of the array
+
+### Building the example app from thinking react
+
+#### 0. Data model 
+
+```js
+[
+  { category: "Fruits", price: "$1", stocked: true, name: "Apple" },
+  { category: "Fruits", price: "$1", stocked: true, name: "Dragonfruit" },
+  { category: "Fruits", price: "$2", stocked: false, name: "Passionfruit" },
+  { category: "Vegetables", price: "$2", stocked: true, name: "Spinach" },
+  { category: "Vegetables", price: "$4", stocked: false, name: "Pumpkin" },
+  { category: "Vegetables", price: "$1", stocked: true, name: "Peas" }
+]
+```
+
+#### 1. Mockup 
+
+<img src="../search-fruits/bilder/s_thinking-in-react_ui.png" width=300 height=300>
+
+#### 2. Break the UI into pieces
+
+1. **FilterableProductTable**: Entire Table 
+2. **SearchBar**: Search button and toggle 
+3. **ProductTable**: All products
+4. **ProductCategoryRow**: One category 
+5. **ProductRow**: 
+
+#### 3. Build a static version
+
+
 # Next.js
