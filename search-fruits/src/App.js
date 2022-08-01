@@ -13,16 +13,28 @@ const DATA_MODEL = [
   { category: "Vegetables", price: "$4", stocked: false, name: "Pumpkin" },
   { category: "Vegetables", price: "$1", stocked: true, name: "Peas" }
 ];
-
-function SearchBar(){
+/** 
+function SearchBarBootstrap(){
+  //Add bootstrap container and rows/
   return(
-    /**Add bootstrap container and rows */
     <div class="input-group mb-3">
       <input type="text" class="form-control" placeholder="Search ..." aria-label="Search-Button" aria-describedby="searchbtn-fruits"></input>
       <input class="form-check-input" type="checkbox" value="" id="showProductsStock" />
   <label class="form-check-label" for="flexCheckDefault">
     Only show products in stock
   </label>
+    </div>
+  )
+}**/
+
+function SearchBarOwnCss(){
+  return(
+    <div class="search-bar-searchBox">
+      <input class="search-bar-searchInput"  type="text" name="" placeholder="Search ...">
+      </input>
+      <button class="search-bar-searchButton" href="#">
+        <i class="material-icons">search</i>
+      </button>
     </div>
   )
 }
