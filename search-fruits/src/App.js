@@ -30,10 +30,9 @@ function SearchBarBootstrap(){
 function SearchBarOwnCss(){
   return(
     <div class="search-bar-searchBox">
-      <input class="search-bar-searchInput"  type="text" name="" placeholder="Search ...">
-      </input>
+      <input class="search-bar-searchInput"  type="text" name="" placeholder="Search ..." /> 
       <button class="search-bar-searchButton" href="#">
-        <i class="material-icons">search</i>
+        <i class="fa fa-search"></i>
       </button>
     </div>
   )
@@ -42,8 +41,8 @@ function SearchBarOwnCss(){
 export default function FilterableProductTable(){
  return(
    <div>
-   <h1>My Fruit App</h1>
-   <SearchBar/>
+   <h1><center>My Fruit App</center></h1>
+   <SearchBarOwnCss/>
    </div>
  )
 }
